@@ -59,7 +59,7 @@ Caso queira contribuir com o repositório:
    ```
 5. Abra um **Pull Request** para revisão.
 
-Refe: 
+Referencia: 
 https://sites.google.com/view/edados20241/home/cronograma-de-aulas = ed20171 
 
 
