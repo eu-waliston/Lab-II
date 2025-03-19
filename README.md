@@ -59,8 +59,14 @@ Caso queira contribuir com o repositório:
    ```
 5. Abra um **Pull Request** para revisão.
 
+Referencia: 
+https://sites.google.com/view/edados20241/home/cronograma-de-aulas = ed20171 
+
+
 ## 📄 Licença
 Este projeto está licenciado sob a [MIT License](LICENSE).
+
+
 
 ---
 📌 **Mantenedor:** Waliston (https://github.com/eu-waliston)
