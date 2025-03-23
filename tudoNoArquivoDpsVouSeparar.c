@@ -36,13 +36,12 @@ void adicionarSensor(ListaSensores** lista, char nome[]) {
     *lista = novo;
 }*/
 
-// Agora a função "adicionarSensor" faz tudo (aloca e insere)
 void adicionarSensor(ListaSensores** lista, char nome[]) {
-    ListaSensores* novo = (ListaSensores*)malloc(sizeof(ListaSensores)); // Alocando diretamente aqui
-    novo->id = idSensor++; // Incrementando o id global
-    strcpy(novo->nome, nome); // Copiando o nome do sensor
-    novo->prox = *lista; // Inserindo na lista (como no seu código original)
-    *lista = novo; // Atualizando o ponteiro da lista
+    ListaSensores* novo = (ListaSensores*)malloc(sizeof(ListaSensores)); 
+    novo->id = idSensor++; 
+    strcpy(novo->nome, nome); 
+    novo->prox = *lista; 
+    *lista = novo; 
 }
 
 
