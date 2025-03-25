@@ -37,6 +37,12 @@ int main() {
                 }
                 /*else {
                     buscarDescricao(valor);
+
+                    
+                    TODO => buscarDescricao(valor);
+                    TODO => menu que apaga do anterior 
+                    TODO => listar de for crescente 
+                    
                  }*/
                 break;
             case 5:
