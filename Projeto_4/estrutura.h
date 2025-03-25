@@ -29,7 +29,8 @@ void removerDispositivo(ListaDisp** lista);
 void atualizarDispositivo(ListaDisp** lista);
 void buscarID(ListaDisp* lista, int valor);
 //void buscarDescricao(int valor);
+void buscarPorDescricao(ListaDisp* lista, char descricao[]);
 void listarDispositivos(ListaDisp* lista);
 void liberarMemoria(ListaDisp* lista);
 
-#endif 
+#endif

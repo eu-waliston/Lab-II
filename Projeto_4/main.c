@@ -3,12 +3,23 @@
 #include <stdlib.h> // Necessário para usar system("cls")
 
 int main() {
+
+    void limparTela() {
+        #ifdef _WIN32
+            system("cls"); // Comando para Windows
+        #else
+            system("clear"); // Comando para Linux/macOS
+        #endif
+    }
+
+
+
     ListaDisp* dispositivos = NULL;
     int opcao;
 
     do {
 
-        system("cls"); // Limpa a tela no Windows
+        limparTela(); // Limpa a tela antes de mostrar o menu
 
         printf("\n1. Inserir dispositivo\n");
         printf("2. Remover dispositivo \n");
