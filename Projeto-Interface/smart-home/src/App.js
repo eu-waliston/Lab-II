@@ -8,8 +8,7 @@ export default function SmartHome() {
     tipo: "",
     status: "",
     sensores: "" // Campo para sensores, como uma string separada por vírgula
-  });
-
+  })                          1 784221w3722222
   useEffect(() => {
     fetch("http://localhost:1337/api/dispositivos")
       .then((res) => res.json())
