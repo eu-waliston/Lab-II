@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include "estrutura.h"
+#include <stdlib.h> // Necessário para usar system("cls")
 
 int main() {
     ListaDisp* dispositivos = NULL;
     int opcao;
 
     do {
+
+        system("cls"); // Limpa a tela no Windows
+
         printf("\n1. Inserir dispositivo\n");
         printf("2. Remover dispositivo \n");
         printf("3. Atualizar dispositivo \n");
@@ -42,16 +46,9 @@ int main() {
                     scanf(" %[^\n]", descricaoBusca); // Lendo a string corretamente
                     buscarPorDescricao(dispositivos, descricaoBusca);
                 }
-                /*else {
-                    buscarDescricao(valor);
 
+                    // TODO => listar de for crescente
 
-                    TODO => buscarDescricao(valor);
-                    TODO => menu que apaga do anterior
-                    TODO => listar de for crescente
-
-                 }*/
-                 
                 break;
             case 5:
                 listarDispositivos(dispositivos);
@@ -63,6 +60,12 @@ int main() {
             default:
                 printf("Opcao invalida!\n");
         }
+
+
+        printf("\nPressione Enter para continuar...");
+        getchar(); // Captura o enter extra do scanf
+        getchar(); // Aguarda o usuário pressionar enter
+
     } while (opcao != 6);
 
     return 0;
