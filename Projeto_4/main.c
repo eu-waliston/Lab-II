@@ -81,3 +81,73 @@ int main() {
 
     return 0;
 }
+
+void adicionarEvento(FilaPrioridade* fila, int prioridade, Evento* evento) {
+    Evento** lista;
+
+    // Seleciona a fila com base na prioridade
+    if (prioridade == 1) lista = &(fila->alta);
+    else if (prioridade == 2) lista = &(fila->media);
+    else lista = &(fila->baixa);
+
+    // Insere o evento no início da lista (FIFO)
+    evento->prox = *lista;
+    *lista = evento;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
