@@ -5,8 +5,6 @@
 // Prototipando a função que está em outro arquivo
 void exibirMenu(int opcao);
 
-//exemplo de uso do menu
-// exibirMenu(opcao);
 
 int main() {
 
@@ -16,7 +14,7 @@ int main() {
         #else
             system("clear"); 
         #endif
-    }
+    };
 
 
     ListaDisp* dispositivos = NULL;
@@ -30,16 +28,7 @@ int main() {
         printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
         if(opcao == 1){
-            printf("\n===== MENU DISPOSITIVO =====\n");
-            printf("1. Inserir dispositivo\n");
-            printf("2. Remover dispositivo >\n");
-            printf("3. Atualizar dispositivo \n");
-            printf("4. Buscar dispositivos apartir dos atributos;\n");
-            printf("5. Listar dispositivos\n");
-            printf("0. Sair\n");
-            printf("Escolha uma opcao: ");
-            scanf("%d", &opcao);
-
+            exibirMenu(opcao);
             switch (opcao) {
             case 1:
                 adicionarDispositivo(&dispositivos);
@@ -78,6 +67,11 @@ int main() {
                 break;
             default:
                 printf("Opcao invalida!\n");
+                break;
+        } else if (opcao == 2) {
+            exibirMenu(opcao);
+        } else if (opcao == 3) {
+            exibirMenu(opcao);
         }
 
 
@@ -88,21 +82,9 @@ int main() {
     } while (opcao != 6);
             
         } else if( opcao == 2){
-            printf("\n===== MENU SENSOR OU ACIONADOR =====\n");
-            printf("1. Adicionar sensor ao dispositivo\n");
-            printf("2. Listar sensores de um dispositivo\n");
-            printf("3. Remover sensor de um dispositivo\n");
-            printf("0. Sair\n");
-            printf("Escolha uma opcao: ");
-            scanf("%d", &opcao);
+            exibirMenu(opcao);
         } else{
-            printf("\n===== MENU EVENTO =====\n");
-            printf("1. Adicionar evento\n");
-            printf("2. Listar eventos agendados\n");
-            printf("3. Executar próximo evento\n");
-            printf("0. Sair\n");
-            printf("Escolha uma opcao: ");
-            scanf("%d", &opcao);
+            exibirMenu(opcao);
         }
 
 
