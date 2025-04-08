@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include "estrutura.h"
-#include <stdlib.h> 
+#include <stdlib.h>
+
+// Prototipando a função que está em outro arquivo
+void exibirMenu(int opcao);
+
+//exemplo de uso do menu
+// exibirMenu(opcao);
 
 int main() {
 
