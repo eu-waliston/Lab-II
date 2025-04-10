@@ -76,7 +76,7 @@ void adicionarSensor(ListaSensores** lista, char nome[]);
 // executarEvento
 
 // ---------------------------
-// OUTROS
+// UTILS
 // ---------------------------
 void liberarMemoria(ListaDisp* lista);
 void mostrarInformacao(ListaDisp* lista);

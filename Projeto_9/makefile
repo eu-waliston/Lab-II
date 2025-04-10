@@ -17,7 +17,7 @@ CC = gcc
 # Flags do compilador
 CFLAGS = -Wall -g
 
-# Regra padrão:compilaro executavel
+# Regra padrão para compilar o executavel
 all: $(EXEC)
 
 # Como gerar o executável a partir dos objetos
