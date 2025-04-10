@@ -1,8 +1,12 @@
+
+33
+
+
 #Nome do executaél final
 EXEC = programa
 
 # Lista de arquivos fonte
-SRC = main.c menus.c sensores.c estrutura.c utils.c
+SRC = dispositivo.c eventos.c main.c menus.c sensores.c utils.c
 
 # Geração os arquivos objetos
 OBS = $(SRC:.c=o)
