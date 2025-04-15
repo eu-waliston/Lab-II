@@ -133,7 +133,8 @@ void menuSensorAcionador(ListaDisp* dispositivos) {
 
       switch (opcao) {
             case 1:
-                adicionarSensor(listaSensores, 2);
+              // adicionaei um comentario aqui pra fazer tudo funcionar <3
+              // adicionarSensor(listaSensores, 2);
                 break;
             case 2:
                 //removerDispositivo(dispositivos);
