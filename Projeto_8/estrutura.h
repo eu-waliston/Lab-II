@@ -24,7 +24,8 @@ typedef struct Evento {
     ListaDisp* dispositivo;
     //ListaSensores* sensor;
     char descricao[100];
-    struct evento* prox;
+    float valor;    
+    struct evento* prox; 
 } Evento;
 
 // Filas de prioridade
