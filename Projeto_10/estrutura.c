@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stddef.h>
 #include "estrutura.h"
 
 int idDispositivo = 1;
@@ -231,7 +232,8 @@ ListaDisp* criarDispositivo(char descricao[], char tipo[], char status[]) {
 
 void adicionarDispositivo(ListaDisp** lista) {
     char descricao[50], tipo[50], status[50];
-    int qtdSensores, i;
+    int qtdSensores;
+    //int qtdSensores, i >> esse i aqui esta dando Warning tambpem, talvez ele n esteja aqui quanod vc chegar
 
     printf("\nDigite a descricao do dispositivo (ex: Luz da sala, camera do quintal, etc.): ");
     scanf(" %[^\n]", descricao);
