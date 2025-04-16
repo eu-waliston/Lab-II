@@ -4,6 +4,16 @@
 #define ESTRUTURA_H
 
 
+//// Estrutura para sensores
+//typedef struct ListaSensores {
+//    int id;
+//    char nome[50];
+//    char tipo[50];
+//    char subtipo[50];
+//    struct ListaSensores* prox;
+//} ListaSensores;
+
+
 typedef struct listaSensores {
     int id;
     char subtipo[50];
@@ -24,11 +34,34 @@ typedef struct listaDisp {
 extern int idDispositivo;
 extern int idSensor;
 
+
+// ---------------------------
+// Estrutura de eventos
+// ---------------------------
+typedef struct Evento {
+    ListaDisp* dispositivo;
+    ListaSensores* sensor;
+    char descricao[100];
+    struct Evento* prox;
+} Evento;
+
+// ---------------------------
+// Filas de Prioridade
+// ---------------------------
+typedef struct {
+    Evento* Alta;
+    Evento* Media;
+    Evento* Baixa;
+} FilaEventos;
+
+// ---------------------------
+// Limpar Tela
+// ---------------------------
+void limparTela();
+
 // ---------------------------
 // menus.c
 // ---------------------------
-
-void limparTela();
 void menuPrincipal(ListaDisp* lista);
 void menuDispositivos(ListaDisp* lista);
 void menuSensorAcionador(ListaDisp* lista);
@@ -37,12 +70,9 @@ void menuEventos(ListaDisp* lista);
 // ---------------------------
 // SensorAcionador.c
 // ---------------------------
-
-
-
+ListaDisp* criarDispositivo(char descricao[], char tipo[], char status[]);
 
 void adicionarSensor(ListaSensores** lista, int n );
-ListaDisp* criarDispositivo(char descricao[], char tipo[], char status[]);
 void adicionarDispositivo(ListaDisp** lista);
 void removerDispositivo(ListaDisp** lista);
 void atualizarDispositivo(ListaDisp** lista);

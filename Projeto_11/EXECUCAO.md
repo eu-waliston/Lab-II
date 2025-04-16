@@ -1,15 +1,35 @@
 # Execução do Projeto
 
-### Passo 1
+### Com [ GCC ]
+
 ```bash
 
-gcc main.c estrutura.c -o sistema
+gcc main.c estrutura.c dispositivos.c menus.c  -o sistema
 
 ```
 
-### Passo 2
 ```bash
 
 ./sistema
+
+```
+
+
+### Com [ MAKEFILE ]
+
+### para compilar
+```bash
+make
+```
+
+### para executar
+```bash
+make run
+```
+
+### para limpar
+```bash
+
+make clean
 
 ```

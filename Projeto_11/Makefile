@@ -1,17 +1,3 @@
-# PARA EXECUTAR O PROJETO:
-
-# Compila o projeto
-#make
-
-# Executa o binário
-#make run
-
-# Limpa os arquivos binários e objetos
-#make clean
-
-# (no Windows, opcional)
-#make clean-win
-
 # Nome do executável final
 TARGET = casa_inteligente
 
@@ -20,7 +6,7 @@ CC = gcc
 CFLAGS = -Wall -g
 
 # Lista de arquivos fontes
-SRCS = main.c estrutura.c
+SRCS = main.c estrutura.c dispositivos.c menus.c utils.c eventos.c
 
 # Dependências (headers)
 DEPS = estrutura.h
