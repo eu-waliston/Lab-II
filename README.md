@@ -1,75 +1,34 @@
-# 🖥️ Laboratório de Programação II
+# 💡 Laboratório de Programação II – UFSM
 
-## 📌 Descrição
-Este repositório contém projetos, exercícios e materiais desenvolvidos durante a disciplina **Laboratório de Programação II**. O objetivo é aprimorar habilidades de programação por meio da prática, explorando conceitos avançados e boas práticas de desenvolvimento.
+Este repositório reúne projetos, atividades e práticas desenvolvidas ao longo da disciplina **Laboratório de Programação II** do curso de Sistemas de Informação na **Universidade Federal de Santa Maria (UFSM)**.
 
-## 🎯 Objetivos
-- Aplicar conceitos avançados de programação.
-- Desenvolver projetos práticos e interativos.
-- Explorar novas tecnologias e metodologias.
-- Aprimorar o trabalho em equipe e versionamento de código.
-
-## 🛠️ Tecnologias Utilizadas
-- **Linguagem de Programação:** C
-- **Ferramentas:** GCC, GDB, Makefile
-- **Versionamento:** Git & GitHub
-
-## 📂 Estrutura do Repositório
-```
-📦 Laboratorio-de-Programacao-II
-├── 📁 src           # Código-fonte dos projetos
-├── 📁 docs          # Documentação e anotações da disciplina
-├── 📁 tests         # Testes automatizados
-├── 📄 README.md     # Documentação principal
-└── 📄 .gitignore    # Arquivos ignorados pelo Git
-```
-
-## 🚀 Como Utilizar
-1. Clone o repositório:
-   ```sh
-   git clone https://github.com/seu-usuario/Laboratorio-de-Programacao-II.git
-   ```
-2. Acesse a pasta do projeto:
-   ```sh
-   cd Laboratorio-de-Programacao-II
-   ```
-3. Compile o código-fonte:
-   ```sh
-   gcc -o programa src/main.c
-   ```
-4. Execute o programa:
-   ```sh
-   ./programa
-   ```
-
-## 🤝 Contribuição
-Caso queira contribuir com o repositório:
-1. Faça um **fork** do projeto.
-2. Crie uma nova branch com sua feature:
-   ```sh
-   git checkout -b minha-feature
-   ```
-3. Faça o commit das alterações:
-   ```sh
-   git commit -m "Adiciona nova funcionalidade"
-   ```
-4. Faça o push para a branch:
-   ```sh
-   git push origin minha-feature
-   ```
-5. Abra um **Pull Request** para revisão.
-
-Referencia: 
-<br />
-https://sites.google.com/view/edados20241/home/cronograma-de-aulas = ed20171 
-
-
-## 📄 Licença
-Este projeto está licenciado sob a [MIT License](LICENSE).
-
-
+O objetivo da disciplina é aplicar conceitos fundamentais de programação estruturada em C, com foco em **estruturas de dados**, **manipulação de memória**, **modularização de código** e **projetos com múltiplos arquivos**.
 
 ---
-📌 **Mantenedor:** Waliston (https://github.com/eu-waliston)
+
+
+## 🔧 Projeto Principal: Sistema de Gerenciamento de Casa Inteligente
+
+Um dos principais projetos desenvolvidos durante o semestre é um **sistema modular de controle de dispositivos e sensores inteligentes**. Ele simula uma casa conectada, com:
+
+- 📲 **Dispositivos inteligentes**: Representam equipamentos como lâmpadas, câmeras, etc.
+- 🧠 **Sensores acoplados**: São sensores específicos para cada dispositivo, como sensor de movimento, temperatura, entre outros.
+- 🔁 **Fila de eventos por prioridade**: Eventos são executados por prioridade (alta, média, baixa), simulando um agendador simples.
+- 💾 **Alocação dinâmica e estruturas encadeadas**: Uso de ponteiros e listas para gerenciar os dados de forma eficiente.
+- ✅ **Execução de eventos**: Simula ações como "ligar/desligar dispositivos" com base nos eventos.
+
+---
+
+## 🧱 Tecnologias e Conceitos Utilizados
+
+- ✅ Linguagem C (padrão C99)
+- 📦 Modularização (`.h` e `.c` separados)
+- 🧠 Ponteiros e Alocação Dinâmica (`malloc`, `free`)
+- 🔁 Listas Encadeadas
+- 🧺 Fila com múltiplas prioridades
+- 🔄 Manipulação de structs aninhadas
+- 📁 Makefile com suporte multiplataforma (Linux e Windows)
+- 📄 Documentação em Markdown
+
 
 
