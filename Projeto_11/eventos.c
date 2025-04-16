@@ -5,9 +5,14 @@
 #include "estrutura.h"
 
 void inicializarFilas(FilaEventos* fila) {
-    fila->Alta = fila->Alta = NULL;
-    fila->Media = fila->Media = NULL;
-    fila->Baixa = fila->Baixa = NULL;
+
+//    fila->Alta = fila->Alta = NULL;
+//    fila->Media = fila->Media = NULL;
+//    fila->Baixa = fila->Baixa = NULL;
+
+    fila->Alta = NULL;
+    fila->Media = NULL;
+    fila->Baixa = NULL;
 }
 
 void adicionarEvento(FilaEventos* fila, ListaDisp* lista, int idDispositivo, int idSensor, char* descricao, char prioridade) {
