@@ -15,10 +15,11 @@
 
 
 typedef struct listaSensores {
-    int id;
-    char subtipo[50];
-
-    struct listaSensores* prox;
+        int id;
+        char subtipo[50];
+        char nome[50];
+        char tipo[50];
+        struct listaSensores* prox;
 } ListaSensores;
 
 
