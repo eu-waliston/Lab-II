@@ -107,7 +107,7 @@ Este projeto proporcionou:
 
 ## ✍️ Autor
 
-Desenvolvido por **[Yriane & Waliston]**, estudante de Sistemas de Informação – UFSM.
+Desenvolvido por **[Yriane & Waliston]**, estudantes de Sistemas de Informação – UFSM.
 
 > “A melhor forma de aprender é programando e errando com propósito.” – alguém com um `segmentation fault` no coração 🖤
 
