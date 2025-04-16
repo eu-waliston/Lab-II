@@ -1,4 +1,0 @@
-gcc main.c estrutura.c -o sistema
-
-./sistema
-
