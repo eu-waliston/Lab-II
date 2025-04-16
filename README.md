@@ -1,34 +1,120 @@
 # 💡 Laboratório de Programação II – UFSM
 
-Este repositório reúne projetos, atividades e práticas desenvolvidas ao longo da disciplina **Laboratório de Programação II** do curso de Sistemas de Informação na **Universidade Federal de Santa Maria (UFSM)**.
-
-O objetivo da disciplina é aplicar conceitos fundamentais de programação estruturada em C, com foco em **estruturas de dados**, **manipulação de memória**, **modularização de código** e **projetos com múltiplos arquivos**.
+<p align="center">
+  <img src="https://img.shields.io/badge/Linguagem-C-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Disciplina-Lab--Prog%20II-blueviolet?style=flat-square" />
+  <img src="https://img.shields.io/badge/Semestre-2025.1-green?style=flat-square" />
+</p>
 
 ---
 
+📍 **Curso**: Sistemas de Informação  
+🏫 **Universidade**: Universidade Federal de Santa Maria – UFSM  
+👨‍💻 **Objetivo da disciplina**: Aplicar os fundamentos da programação estruturada em C, com foco em:
+
+- Estruturas de Dados
+- Modularização de código
+- Alocação dinâmica e ponteiros
+- Projetos reais com múltiplos arquivos
+
+---
 
 ## 🔧 Projeto Principal: Sistema de Gerenciamento de Casa Inteligente
 
-Um dos principais projetos desenvolvidos durante o semestre é um **sistema modular de controle de dispositivos e sensores inteligentes**. Ele simula uma casa conectada, com:
+Este projeto simula uma **casa inteligente**, onde dispositivos podem ser inseridos, removidos, atualizados e executados com base em eventos organizados por **níveis de prioridade**.
 
-- 📲 **Dispositivos inteligentes**: Representam equipamentos como lâmpadas, câmeras, etc.
-- 🧠 **Sensores acoplados**: São sensores específicos para cada dispositivo, como sensor de movimento, temperatura, entre outros.
-- 🔁 **Fila de eventos por prioridade**: Eventos são executados por prioridade (alta, média, baixa), simulando um agendador simples.
-- 💾 **Alocação dinâmica e estruturas encadeadas**: Uso de ponteiros e listas para gerenciar os dados de forma eficiente.
-- ✅ **Execução de eventos**: Simula ações como "ligar/desligar dispositivos" com base nos eventos.
+### Funcionalidades principais:
+
+✅ Cadastro e gerenciamento de dispositivos inteligentes  
+📡 Inclusão de sensores em cada dispositivo  
+🗃️ Organização de eventos em filas de prioridade (Alta, Média, Baixa)  
+🎯 Execução de eventos por ordem de prioridade  
+🧠 Uso de listas encadeadas e alocação dinâmica de memória
 
 ---
 
-## 🧱 Tecnologias e Conceitos Utilizados
+## 🧠 Conceitos Abordados
 
-- ✅ Linguagem C (padrão C99)
-- 📦 Modularização (`.h` e `.c` separados)
-- 🧠 Ponteiros e Alocação Dinâmica (`malloc`, `free`)
-- 🔁 Listas Encadeadas
-- 🧺 Fila com múltiplas prioridades
-- 🔄 Manipulação de structs aninhadas
-- 📁 Makefile com suporte multiplataforma (Linux e Windows)
-- 📄 Documentação em Markdown
+| Conceito                         | Descrição                                                                 |
+|----------------------------------|---------------------------------------------------------------------------|
+| 📁 Modularização                 | Separação lógica entre arquivos `.c` e `.h` para organização e manutenção |
+| 🧠 Ponteiros & Memória Dinâmica  | Uso de `malloc`, `free`, e referências entre estruturas                   |
+| 🔁 Listas Encadeadas             | Representação dinâmica de dispositivos e sensores                         |
+| ⏳ Fila de Prioridade            | Agendamento inteligente dos eventos com base na urgência                  |
+| 🧱 Structs Aninhadas             | Estruturação dos dados com múltiplos níveis hierárquicos                  |
+| 🧹 Makefile Multiplataforma     | Compilação automatizada em **Linux** e **Windows**                        |
 
+---
 
+## ⚙️ Estrutura de Arquivos
+
+```
+📁 projeto-casa-inteligente/
+├── estrutura.c        # Implementação das funções e lógica de dados
+├── estrutura.h        # Cabeçalhos e definições de estruturas
+├── main.c             # Função principal e interface do sistema
+├── Makefile           # Script de build multiplataforma
+└── README.md          # Este documento
+```
+
+---
+
+## ▶️ Executando o Projeto
+
+### 🐧 Linux / MacOS
+
+```bash
+make
+./main
+```
+
+### 🪟 Windows (via Git Bash, CMD com gcc, ou WSL)
+
+```bash
+make
+main.exe
+```
+
+### 🧹 Para limpar os arquivos compilados:
+
+```bash
+make clean
+```
+
+---
+
+## 📌 Exemplos de Ações Suportadas
+
+- [x] Inserir novo dispositivo
+- [x] Atualizar sensores
+- [x] Excluir dispositivos
+- [x] Visualizar status da casa
+- [x] Executar todos os eventos pendentes
+
+---
+
+## 📚 Aprendizados e Experiência
+
+Este projeto proporcionou:
+
+- 🧠 Consolidação de conceitos avançados em C
+- 🛠️ Vivência em organização de projetos modulares
+- 🔍 Experiência com filas de prioridade na prática
+- 📐 Boas práticas de engenharia de software
+- 🔄 Testes manuais e controle de fluxo com menus interativos
+
+---
+
+## ✍️ Autor
+
+Desenvolvido por **[Yriane & Waliston]**, estudante de Sistemas de Informação – UFSM.
+
+> “A melhor forma de aprender é programando e errando com propósito.” – alguém com um `segmentation fault` no coração 🖤
+
+---
+
+## 📜 Licença
+
+Este repositório está sob a licença [MIT](LICENSE).  
+Sinta-se à vontade para estudar, adaptar e compartilhar este material com os devidos créditos.
 
