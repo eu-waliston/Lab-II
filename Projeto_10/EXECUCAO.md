@@ -3,7 +3,7 @@
 ### Passo 1
 ```bash
 
-gcc main.c estrutura.c -o sistema
+gcc main.c sensores.c -o sistema
 
 ```
 

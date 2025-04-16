@@ -4,7 +4,7 @@
 
 ```bash
 
-gcc main.c estrutura.c dispositivos.c menus.c  -o sistema
+gcc main.c sensores.c dispositivos.c menus.c  -o sistema
 
 ```
 

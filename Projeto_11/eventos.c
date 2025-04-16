@@ -95,9 +95,11 @@ void executarEvento(FilaEventos* fila) {
     *filaAtual = evento->prox;
 
     printf("\nExecutando evento: %s\n", evento->descricao);
+
 //    evento->dispositivo->status = !evento->dispositivo->status;
 //    printf("Status do dispositivo %d alterado para: %s\n", evento->dispositivo->id,
 //           evento->dispositivo->status ? "Ligado" : "Desligado");
+
     if (strcmp(evento->dispositivo->status, "Ligado") == 0) {
         strcpy(evento->dispositivo->status, "Desligado");
     } else {

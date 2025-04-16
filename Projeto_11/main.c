@@ -2,8 +2,6 @@
 #include "estrutura.h"
 #include <stdlib.h> 
 
-
-
 int main() {
 
     ListaDisp* dispositivos = NULL;

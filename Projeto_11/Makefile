@@ -6,7 +6,7 @@ CC = gcc
 CFLAGS = -Wall -g
 
 # Lista de arquivos fontes
-SRCS = main.c estrutura.c dispositivos.c menus.c utils.c eventos.c
+SRCS = main.c estrutura.c dispositivos.c menus.c utils.c eventos.c sensores.c
 
 # Dependências (headers)
 DEPS = estrutura.h

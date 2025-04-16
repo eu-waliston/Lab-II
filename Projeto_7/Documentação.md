@@ -67,14 +67,14 @@ Este documento descreve as atualizações realizadas no projeto da Casa Intelige
 ```bash 
 ### 1 Execução do projeto V1
 
-gcc main.c estrutura.c -o casa_inteligente
+gcc main.c sensores.c -o casa_inteligente
 
 ```
 
 ```bash
 ### 1 Execução do projeto V2
 
-gcc main.c estrutura.c -o sistema
+gcc main.c sensores.c -o sistema
 
 ./sistema
 
