@@ -326,7 +326,6 @@ void atualizarDispositivo(ListaDisp** lista) {
     printf("Dispositivo atualizado com sucesso.\n");
 }
 
-
 void buscarID(ListaDisp* lista, int valorid) {
     ListaDisp* atual = lista;
     int encontrado = 0;
@@ -349,7 +348,6 @@ void buscarID(ListaDisp* lista, int valorid) {
 
 }
 
-
 void buscarPorDescricao(ListaDisp* lista, char descricaoBuscada[]) {
     ListaDisp* atual = lista;
     int encontrado = 0;
@@ -369,8 +367,6 @@ void buscarPorDescricao(ListaDisp* lista, char descricaoBuscada[]) {
         printf("Nenhum dispositivo encontrado com a descrição: %s\n", descricaoBuscada);
     }
 }
-
-
 
 void listarDispositivos(ListaDisp* lista) {
     if (lista == NULL) {
