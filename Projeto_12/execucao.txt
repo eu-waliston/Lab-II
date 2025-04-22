@@ -1,0 +1,43 @@
+gcc main.c estrutura.c -o sistema
+
+./sistema
+
+
+gcc main.c dispositivos.c eventos.c menus.c -o sis
+
+gcc main.c dispositivos.c eventos.c menus.c sensores.c -o sistema
+
+
+
+
+
+
+/*int verficarSeHaDisp(ListaDisp** lista){
+    ListaDisp* atual = lista;
+    if(atual->sensores->id == NULL){
+        printf("Nenhum sensor cadastrado.\n");
+        return 0;
+    } else {
+        return atual->sensores->id;
+    }
+}
+
+void adicionarSensor(ListaDisp** lista) {
+    char tipoSensorAtuador[50], subTipoSensorAtuador[50];
+
+    ListaDisp* novo = (ListaDisp*)malloc(sizeof(ListaDisp));
+    novo->id = idSensor++;
+
+    printf("\n Digite o tipo (Sensor ou Atuador) ");
+    scanf(" %[^\n]", tipoSensorAtuador);
+    strcpy(novo->sensores->tipo, tipoSensorAtuador);
+
+    printf("Digite o  subtipo do sensor/acionador (temperatura, umidade, movimento, etc.)");
+    scanf(" %[^\n]", subTipoSensorAtuador);
+    strcpy(novo->sensores->subtipo, tipoSensorAtuador);
+    
+    novo->prox = *lista;
+    *lista = novo;
+}
+
+*/
