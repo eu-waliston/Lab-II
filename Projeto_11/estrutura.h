@@ -66,20 +66,41 @@ void limparTela();
 void menuPrincipal(ListaDisp* lista);
 void menuDispositivos(ListaDisp* lista);
 void menuSensorAcionador(ListaDisp* lista);
-void menuEventos(ListaDisp* lista);
+//void menuEventos(ListaDisp* lista);
+void menuEventos(ListaDisp* lista, FilaEventos* fila);
+
 
 // ---------------------------
-// SensorAcionador.c
+// Dispositivo
 // ---------------------------
 ListaDisp* criarDispositivo(char descricao[], char tipo[], char status[]);
-
-void adicionarSensor(ListaSensores** lista, int n );
 void adicionarDispositivo(ListaDisp** lista);
 void removerDispositivo(ListaDisp** lista);
 void atualizarDispositivo(ListaDisp** lista);
 void buscarID(ListaDisp* lista, int valor);
 void buscarPorDescricao(ListaDisp* lista, char descricao[]);
 void listarDispositivos(ListaDisp* lista);
+
+// ---------------------------
+// Sensores
+// ---------------------------
+void adicionarSensor(ListaSensores** lista, int n);
+void listarSensores(ListaDisp* lista, int idDispositivo);
+void removerSensor(ListaDisp* lista, int idDispositivo, int idSensor);
+
+// ---------------------------
+// Eventos
+// ---------------------------
+void inicializarFilas(FilaEventos* fila);
+void adicionarEvento(FilaEventos* fila, ListaDisp* lista, int idDispositivo, int idSensor, char* descricao, char prioridade);
+void listarEventos(FilaEventos* fila);
+void executarEvento(FilaEventos* fila);
+
+// ---------------------------
+// Liberar Memoria
+// ---------------------------
 void liberarMemoria(ListaDisp* lista);
+
+
 
 #endif

@@ -7,6 +7,11 @@
 void menuPrincipal(ListaDisp* dispositivos) {
 
     int opcao;
+
+    FilaEventos filaEventos;  // Declara a fila de eventos
+
+    // Inicializa as filas de eventos (se necessário)
+    inicializarFilas(&filaEventos);
     do {
         limparTela(); 
         printf("\n===== MENU PRINCIPAL =====\n");
@@ -25,7 +30,9 @@ void menuPrincipal(ListaDisp* dispositivos) {
                 menuSensorAcionador(dispositivos);
                 break;
             case 3:
-                menuEventos(dispositivos);
+//                menuEventos(dispositivos);
+					menuEventos(dispositivos, &filaEventos);
+
                 break;
             case 0:
                 liberarMemoria(dispositivos);
@@ -120,13 +127,13 @@ void menuSensorAcionador(ListaDisp* dispositivos) {
       switch (opcao) {
             case 1:
               // adicionaei um comentario aqui pra fazer tudo funcionar <3
-              // adicionarSensor(listaSensores, 2);
+//               adicionarSensor(ListaSensores, 0);
                 break;
             case 2:
-                //removerDispositivo(dispositivos);
+                removerDispositivo(&dispositivos);
                 break;
             case 3:
-                //atualizarDispositivo(dispositivos);
+                atualizarDispositivo(&dispositivos);
                 break;
             case 0:
                 menuPrincipal(dispositivos);
@@ -141,7 +148,45 @@ void menuSensorAcionador(ListaDisp* dispositivos) {
 }
 
 
-void menuEventos(ListaDisp* dispositivos) {
+//void menuEventos(ListaDisp* dispositivos) {
+//    int opcao;
+//    do {
+//        limparTela();
+//
+//        printf("\n===== MENU EVENTO =====\n");
+//        printf("1. Adicionar evento\n");
+//        printf("2. Listar eventos agendados\n");
+//        printf("3. Executar próximo evento\n");
+//        printf("0. Sair\n");
+//        printf("Escolha uma opcao: ");
+//        scanf("%d", &opcao);
+//
+//        switch (opcao) {
+//            case 1:
+//              	adicionarEvento(&dispositivos);
+//                //adicionarDispositivo();
+//            break;
+//            case 2:
+//              	listarEventos(&dispositivos);
+//                //removerDispositivo();
+//            break;
+//            case 3:
+//              	executarEvento(&dispositivos);
+//                //atualizarDispositivo
+//            break;
+//            case 0:
+//                menuPrincipal(dispositivos);
+//            break;
+//            default:
+//                printf("Opcao invalida!\n");
+//        }
+//
+//        printf("\nPressione Enter para continuar..."); getchar(); getchar();
+//
+//    } while (opcao != 6);
+//}
+
+void menuEventos(ListaDisp* dispositivos, FilaEventos* fila) {
     int opcao;
     do {
         limparTela();
@@ -150,28 +195,42 @@ void menuEventos(ListaDisp* dispositivos) {
         printf("1. Adicionar evento\n");
         printf("2. Listar eventos agendados\n");
         printf("3. Executar próximo evento\n");
-        printf("0. Sair\n");
+        printf("0. Voltar\n");
         printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
 
         switch (opcao) {
-            case 1:
-                adicionarDispositivo(&dispositivos);
-            break;
+            case 1: {
+                int idDisp, idSensor;
+                char descricao[100];
+                char prioridade;
+
+                printf("ID do dispositivo: ");
+                scanf("%d", &idDisp);
+                printf("ID do sensor: ");
+                scanf("%d", &idSensor);
+                printf("Descricao do evento: ");
+                scanf(" %[^\n]", descricao);
+                printf("Prioridade (A/M/B): ");
+                scanf(" %c", &prioridade);
+
+                adicionarEvento(fila, dispositivos, idDisp, idSensor, descricao, prioridade);
+                break;
+            }
             case 2:
-                removerDispositivo(&dispositivos);
-            break;
+                listarEventos(fila);
+                break;
             case 3:
-                atualizarDispositivo(&dispositivos);
-            break;
+                executarEvento(fila);
+                break;
             case 0:
-                menuPrincipal(dispositivos);
-            break;
+                return; // volta ao menu anterior
             default:
                 printf("Opcao invalida!\n");
         }
 
-        printf("\nPressione Enter para continuar..."); getchar(); getchar();
+        printf("\nPressione Enter para continuar...");
+        getchar(); getchar();
 
-    } while (opcao != 6);
+    } while (opcao != 0);
 }

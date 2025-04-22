@@ -40,3 +40,4 @@ clean:
 clean-win:
 	@echo Limpando arquivos no Windows...
 	@del /Q *.o $(TARGET).exe 2>nul || echo "Nada a remover"
+

@@ -60,30 +60,81 @@ void adicionarEvento(FilaEventos* fila, ListaDisp* lista, int idDispositivo, int
     printf("Evento adicionado com sucesso!\n");
 }
 
+//void listarEventos(FilaEventos* fila) {
+//    Evento* atual;
+//
+//    printf("\n[ALTA prioridade]\n");
+//    atual = fila->Alta;
+//    while (atual) {
+//        printf("- %s (Disp %d, Sensor %d)\n", atual->descricao, atual->dispositivo->id, atual->sensor->id);
+//        atual = atual->prox;
+//    }
+//
+//    printf("[MEDIA prioridade]\n");
+//    atual = fila->Media;
+//    while (atual) {
+//        printf("- %s (Disp %d, Sensor %d)\n", atual->descricao, atual->dispositivo->id, atual->sensor->id);
+//        atual = atual->prox;
+//    }
+//
+//    printf("[BAIXA prioridade]\n");
+//    atual = fila->Baixa;
+//    while (atual) {
+//        printf("- %s (Disp %d, Sensor %d)\n", atual->descricao, atual->dispositivo->id, atual->sensor->id);
+//        atual = atual->prox;
+//    }
+//}
+
 void listarEventos(FilaEventos* fila) {
     Evento* atual;
 
-    printf("\n[ALTA prioridade]\n");
+    printf("\n=========== EVENTOS AGENDADOS ===========\n");
+
+    // Alta prioridade
+    printf("\n[Prioridade ALTA]\n");
     atual = fila->Alta;
+    if (!atual) {
+        printf("Nenhum evento.\n");
+    }
     while (atual) {
-        printf("- %s (Disp %d, Sensor %d)\n", atual->descricao, atual->dispositivo->id, atual->sensor->id);
+        printf("- Evento: %s | Dispositivo ID: %d (%s) | Sensor ID: %d (%s)\n",
+               atual->descricao,
+               atual->dispositivo->id, atual->dispositivo->descricao,
+               atual->sensor->id, atual->sensor->nome);
         atual = atual->prox;
     }
 
-    printf("[MEDIA prioridade]\n");
+    // Média prioridade
+    printf("\n[Prioridade MÉDIA]\n");
     atual = fila->Media;
+    if (!atual) {
+        printf("Nenhum evento.\n");
+    }
     while (atual) {
-        printf("- %s (Disp %d, Sensor %d)\n", atual->descricao, atual->dispositivo->id, atual->sensor->id);
+        printf("- Evento: %s | Dispositivo ID: %d (%s) | Sensor ID: %d (%s)\n",
+               atual->descricao,
+               atual->dispositivo->id, atual->dispositivo->descricao,
+               atual->sensor->id, atual->sensor->nome);
         atual = atual->prox;
     }
 
-    printf("[BAIXA prioridade]\n");
+    // Baixa prioridade
+    printf("\n[Prioridade BAIXA]\n");
     atual = fila->Baixa;
+    if (!atual) {
+        printf("Nenhum evento.\n");
+    }
     while (atual) {
-        printf("- %s (Disp %d, Sensor %d)\n", atual->descricao, atual->dispositivo->id, atual->sensor->id);
+        printf("- Evento: %s | Dispositivo ID: %d (%s) | Sensor ID: %d (%s)\n",
+               atual->descricao,
+               atual->dispositivo->id, atual->dispositivo->descricao,
+               atual->sensor->id, atual->sensor->nome);
         atual = atual->prox;
     }
+
+    printf("=========================================\n");
 }
+
 
 void executarEvento(FilaEventos* fila) {
     Evento** filaAtual = NULL;
