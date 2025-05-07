@@ -5,11 +5,6 @@
 #include "estrutura.h"
 
 void inicializarFilas(FilaEventos* fila) {
-
-//    fila->Alta = fila->Alta = NULL;
-//    fila->Media = fila->Media = NULL;
-//    fila->Baixa = fila->Baixa = NULL;
-
     fila->Alta = NULL;
     fila->Media = NULL;
     fila->Baixa = NULL;
@@ -59,31 +54,6 @@ void adicionarEvento(FilaEventos* fila, ListaDisp* lista, int idDispositivo, int
 
     printf("Evento adicionado com sucesso!\n");
 }
-
-//void listarEventos(FilaEventos* fila) {
-//    Evento* atual;
-//
-//    printf("\n[ALTA prioridade]\n");
-//    atual = fila->Alta;
-//    while (atual) {
-//        printf("- %s (Disp %d, Sensor %d)\n", atual->descricao, atual->dispositivo->id, atual->sensor->id);
-//        atual = atual->prox;
-//    }
-//
-//    printf("[MEDIA prioridade]\n");
-//    atual = fila->Media;
-//    while (atual) {
-//        printf("- %s (Disp %d, Sensor %d)\n", atual->descricao, atual->dispositivo->id, atual->sensor->id);
-//        atual = atual->prox;
-//    }
-//
-//    printf("[BAIXA prioridade]\n");
-//    atual = fila->Baixa;
-//    while (atual) {
-//        printf("- %s (Disp %d, Sensor %d)\n", atual->descricao, atual->dispositivo->id, atual->sensor->id);
-//        atual = atual->prox;
-//    }
-//}
 
 void listarEventos(FilaEventos* fila) {
     Evento* atual;
@@ -151,10 +121,6 @@ void executarEvento(FilaEventos* fila) {
     *filaAtual = evento->prox;
 
     printf("\nExecutando evento: %s\n", evento->descricao);
-
-//    evento->dispositivo->status = !evento->dispositivo->status;
-//    printf("Status do dispositivo %d alterado para: %s\n", evento->dispositivo->id,
-//           evento->dispositivo->status ? "Ligado" : "Desligado");
 
     if (strcmp(evento->dispositivo->status, "Ligado") == 0) {
         strcpy(evento->dispositivo->status, "Desligado");

@@ -6,10 +6,6 @@
 int idDispositivo = 1;
 int idSensor = 1;
 
-// ---------------------------
-// SensorAcionador.c
-// ---------------------------
-
 void adicionarSensor(ListaSensores** lista, int n) {
     char tipoSensorAtuador[50], subTipoSensorAtuador[50];
 
@@ -18,10 +14,6 @@ void adicionarSensor(ListaSensores** lista, int n) {
 
     printf("Digite o  subtipo do sensor (temperatura, umidade, movimento, etc.)");
     scanf(" %[^\n]", subTipoSensorAtuador);
-
-
-
-    //adicionarSensor(&(novo->sensores), nomeSensor);
 
     ListaSensores* novo = (ListaSensores*)malloc(sizeof(ListaSensores));
     novo->id = idSensor++;
@@ -73,41 +65,5 @@ void removerSensor(ListaDisp* lista, int idDispositivo, int idSensor) {
     }
     printf("Dispositivo ou sensor nao encontrado.\n");
 }
-
-
-//void adicionarSensor(ListaSensores** lista, char nome[]) {
-//    ListaSensores* novo = (ListaSensores*)malloc(sizeof(ListaSensores));
-//    novo->id = idSensor++;
-//    strcpy(novo->nome, nome);
-//    novo->prox = *lista;
-//    *lista = novo;
-//}
-
-/*
-    printf("\n===== MENU SENSOR OU ACIONADOR =====\n");
-    printf("1. Adicionar sensor ao dispositivo\n");
-    printf("2. Listar sensores de um dispositivo\n");
-    printf("3. Remover sensor de um dispositivo\n");
-*/
-
-
-//void adicionarSensor(ListaDisp* lista, int idDispositivo, int idSensor, const char* nome, const char* tipo, const char* subtipo) {
-//    ListaDisp* atual = lista;
-//    while (atual != NULL) {
-//        if (atual->id == idDispositivo) {
-//            ListaSensores* novo = (ListaSensores*) malloc(sizeof(ListaSensores));
-//            novo->id = idSensor;
-//            strcpy(novo->nome, nome);
-//            strcpy(novo->tipo, tipo);
-//            strcpy(novo->subtipo, subtipo);
-//            novo->prox = atual->sensores;
-//            atual->sensores = novo;
-//            printf("Sensor adicionado ao dispositivo %d com sucesso!\n", idDispositivo);
-//            return;
-//        }
-//        atual = atual->prox;
-//    }
-//    printf("Dispositivo com ID %d nao encontrado.\n", idDispositivo);
-//}
 
 

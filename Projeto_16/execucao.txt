@@ -1,0 +1,29 @@
+gcc main.c dispositivos.c eventos.c menus.c sensores.c utils.c -o sistema
+
+
+
+
+// menu prncipal acescentar um opcao de salvar/exportar e importar os dispositivos
+
+// quando inserir um atuado / sensor colocar 1 para sensor e 2 para atuador
+
+// tirar as funcoes adcionarSensor e adcionarSensorDereto, e criar uma so funcoa
+
+    Oq foi feito a mais: 
+        ListaSensores* obterSensorPorID(ListaDisp* lista, ListaSensores** anterior);
+
+        ListaDisp* obterDispositivoPorID(ListaDisp* lista);
+    Para: 
+// diminuir as fucoes
+
+Criacao do arquivo utils.c contendo :
+    void liberarMemoria(ListaDisp* lista);
+    void mostrarInformacao(ListaDisp* lista);
+    ListaDisp* obterDispositivoPorID(ListaDisp* lista);
+    ListaSensores* obterSensorPorID(ListaDisp* lista, ListaSensores** anterior);
+    void liberarFilaEventos(FilaEventos* fila);
+    void liberarEventos(Evento* evento); 
+
+ Melhorias no menu (anti burro)
+
+// liberar memori os eventos na funcoe para isso

@@ -32,7 +32,6 @@ void menuPrincipal(ListaDisp* dispositivos) {
             case 3:
 //                menuEventos(dispositivos);
 					menuEventos(dispositivos, &filaEventos);
-
                 break;
             case 0:
                 liberarMemoria(dispositivos);
