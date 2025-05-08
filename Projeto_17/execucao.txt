@@ -1,8 +1,5 @@
 gcc main.c dispositivos.c eventos.c menus.c sensores.c utils.c -o sistema
 
-
-
-
 // menu prncipal acescentar um opcao de salvar/exportar e importar os dispositivos
 
 // quando inserir um atuado / sensor colocar 1 para sensor e 2 para atuador
