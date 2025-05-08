@@ -1,4 +1,4 @@
-gcc main.c dispositivos.c eventos.c menus.c sensores.c utils.c -o sistema
+gcc main.c dispositivos.c eventos.c menus.c sensores.c utils.c importartEexportar -c -o sistema
 
 // menu prncipal acescentar um opcao de salvar/exportar e importar os dispositivos
 
