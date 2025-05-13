@@ -7,7 +7,7 @@
 
 
 // Estrutura que representa um valor com timestamp
-typedef struct Valor {
+typedef struct ListaValores {
     char timestamp[30];   // Exemplo: "2025-04-23 20:08:34.329"
     float valor;          // Valor lido ou enviado
     struct Valor* prox;   // Próximo valor na lista

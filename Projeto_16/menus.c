@@ -41,6 +41,7 @@ void menuPrincipal(ListaDisp* dispositivos, FilaEventos* fila) {
                 break;
             case 5:
                 //menuEventos(dispositivos, fila);
+                exportarValoresCSV(dispositivos, "exemplo.csv");
                 break;
             case 0:
                 liberarMemoria(dispositivos);

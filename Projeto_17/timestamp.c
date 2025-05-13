@@ -4,6 +4,11 @@
 
 #include <time.h>
 #include <sys/time.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stddef.h>
+#include "estrutura.h"
 
 // Gera timestamp no formato "YYYY-MM-DD HH:MM:SS.mmm"
 void gerarTimestamp(char* buffer, size_t size) {

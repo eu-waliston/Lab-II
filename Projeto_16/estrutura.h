@@ -92,4 +92,9 @@ ListaSensores* obterSensorPorID(ListaDisp* lista, ListaSensores** anterior);
 void liberarFilaEventos(FilaEventos* fila);
 void liberarEventos(Evento* evento);
 
+//---------------------------
+// Exportar CSV
+//---------------------------
+void exportarValoresCSV(ListaDisp* lista, const char* nomeArquivo);
+
 #endif
