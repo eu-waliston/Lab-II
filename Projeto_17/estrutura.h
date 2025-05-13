@@ -26,8 +26,9 @@ typedef struct ListaSensores {
 // Estrutura dos dispositivos, que contém lista de sensores
 typedef struct ListaDisp {
     int id;
-    char nome[50];
+    char descricao[50];
     char tipo[50];
+    char status[50];
     ListaSensores* sensores;
     struct ListaDisp* prox;
 } ListaDisp;
