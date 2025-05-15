@@ -12,6 +12,12 @@ typedef struct listaSensores {
     struct listaSensores* prox;
 } ListaSensores;
 
+typedef struct ListaValores {
+    char timestamp[30];   // Exemplo: "2025-04-23 20:08:34.329"
+    float valor;          // Valor lido ou enviado
+    struct ListaValores* prox;   // Próximo valor na lista
+} Valor;
+
 
 typedef struct listaDisp {
     int id;

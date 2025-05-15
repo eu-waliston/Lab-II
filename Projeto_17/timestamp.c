@@ -10,6 +10,7 @@
 #include <stddef.h>
 #include "estrutura.h"
 
+
 // Gera timestamp no formato "YYYY-MM-DD HH:MM:SS.mmm"
 void gerarTimestamp(char* buffer, size_t size) {
     struct timeval tv;
@@ -41,20 +42,20 @@ void inserirValorSensor(ListaDisp* lista, int idDispositivo, int idSensor, float
     gerarTimestamp(timestamp, sizeof(timestamp));
 
     // Verificar se já existe esse timestamp no sensor (evitar duplicação)
-    ListaValores* atual = sensor->valores;
-    while (atual) {
-        if (strcmp(atual->timestamp, timestamp) == 0) {
+    ListaValores* valor = sensor->valores;
+    while (valor) {
+        if (strcmp(valor->timestamp, timestamp) == 0) {
             printf("Valor com timestamp %s já existe. Ignorando inserção.\n", timestamp);
             return;
         }
-        atual = atual->prox;
+        valor = valor->prox;
     }
 
-    ListaValores* novo = (ListaValores*) malloc(sizeof(ListaValores));
-    strcpy(novo->timestamp, timestamp);
-    novo->valor = valor;
-    novo->prox = sensor->valores;
-    sensor->valores = novo;
+    ListaValores* valor = (ListaValores*)malloc(sizeof(ListaValores));
+    strcpy(valor->timestamp, timestamp);
+    valor->valor = valor;
+    valor->prox = sensor->valores;
+    sensor->valores = valor;
 
     printf("Valor %.2f adicionado ao sensor %d no dispositivo %d em %s\n", valor, idSensor, idDispositivo, timestamp);
 }

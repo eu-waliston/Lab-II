@@ -1,4 +1,9 @@
 #include <stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stddef.h>
+#include "estrutura.h"
 
 //🔧 Exportar para CSV (exportarValoresCSV)
 

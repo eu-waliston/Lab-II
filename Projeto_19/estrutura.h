@@ -1,36 +1,25 @@
 #include <stddef.h>
-#include <stdlib.h>
-#include <string.h>
 
 #ifndef ESTRUTURA_H
 #define ESTRUTURA_H
 
 
-// Estrutura que representa um valor com timestamp
-typedef struct ListaValores {
-    char timestamp[30];   // Exemplo: "2025-04-23 20:08:34.329"
-    float valor;          // Valor lido ou enviado
-    struct ListaValores* prox;   // Próximo valor na lista
-} Valor;
-
-// Estrutura dos sensores
-typedef struct ListaSensores {
+typedef struct listaSensores {
     int id;
-    char nome[50];
     char tipo[50];
     char subtipo[50];
-    Valor* valores; // Lista de valores associada
-    struct ListaSensores* prox;
+    float valor;
+    struct listaSensores* prox;
 } ListaSensores;
 
-// Estrutura dos dispositivos, que contém lista de sensores
-typedef struct ListaDisp {
+
+typedef struct listaDisp {
     int id;
     char descricao[50];
     char tipo[50];
     char status[50];
-    ListaSensores* sensores;
-    struct ListaDisp* prox;
+    ListaSensores* sensores; 
+    struct listaDisp* prox;
 } ListaDisp;
 
 // Estrutura do Evento
@@ -102,8 +91,5 @@ ListaDisp* obterDispositivoPorID(ListaDisp* lista);
 ListaSensores* obterSensorPorID(ListaDisp* lista, ListaSensores** anterior);
 void liberarFilaEventos(FilaEventos* fila);
 void liberarEventos(Evento* evento);
-
-//import export 
-void exportarValoresCSV(ListaDisp* lista, const char* nomeArquivo);
 
 #endif

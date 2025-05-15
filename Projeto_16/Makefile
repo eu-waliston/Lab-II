@@ -1,43 +1,50 @@
-# Nome do executável final
-TARGET = casa_inteligente
+# Nome do executável
+TARGET = sistema
 
-# Compilador e flags
+# Fontes
+SRCS = main.c dispositivos.c eventos.c menus.c sensores.c utils.c importarEexportar.c ordenar.c timestamp.c
+
+# Objetos (.o)
+OBJS = $(SRCS:.c=.o)
+
+# Compilador
 CC = gcc
-CFLAGS = -Wall -g
 
-# Lista de arquivos fontes
-SRCS = main.c dispositivos.c eventos.c menus.c sensores.c utils.c
+# Flags de compilação
+CFLAGS = -Wall -Wextra -std=c99
 
-# Dependências (headers)
-DEPS = estrutura.h
-
-# Detecta o sistema operacional
-OS := $(shell uname -s)
-
-# Define extensão de executável (Windows .exe / Linux não tem)
-ifeq ($(OS),Windows_NT)
-    EXE = .exe
+# Detectar sistema operacional
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Linux)
+	EXT =
+	RUN = ./$(TARGET)
+else ifeq ($(OS),Windows_NT)
+	EXT = .exe
+	RUN = $(TARGET)$(EXT)
 else
-    EXE =
+	EXT =
+	RUN = ./$(TARGET)
 endif
 
-# Regra principal: compilar tudo
-all: $(TARGET)$(EXE)
+# Regra padrão
+all: $(TARGET)$(EXT)
 
-$(TARGET)$(EXE): $(SRCS) $(DEPS)
-	$(CC) $(CFLAGS) $(SRCS) -o $(TARGET)$(EXE)
+# Como compilar o executável
+$(TARGET)$(EXT): $(OBJS)
+	$(CC) $(OBJS) -o $@
 
-# Rodar o programa
+# Como compilar os arquivos .c em .o
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Executar o programa
 run: all
-	./$(TARGET)$(EXE)
+	$(RUN)
 
-# Limpa arquivos de build
+# Limpa os arquivos .o
 clean:
-	@echo "Limpando arquivos antigos..."
-	@rm -f *.o $(TARGET)$(EXE)
+	rm -f *.o
 
-# Compatível com Windows (uso do del se quiser)
-clean-win:
-	@echo Limpando arquivos no Windows...
-	@del /Q *.o $(TARGET).exe 2>nul || echo "Nada a remover"
-
+# Limpa tudo (inclusive executável)
+cleanall: clean
+	rm -f $(TARGET) $(TARGET).exe
