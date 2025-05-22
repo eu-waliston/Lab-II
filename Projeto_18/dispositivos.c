@@ -101,7 +101,6 @@ void atualizarDispositivo(ListaDisp** lista) {
     printf("Dispositivo atualizado com sucesso.\n");
 }
 
-
 void buscarID(ListaDisp* lista, int valorid) {
     ListaDisp* disp = obterDispositivoPorID(lista);  
     if (disp) {

@@ -1,0 +1,8 @@
+gcc main.c dispositivos.c eventos.c menus.c sensores.c utils.c -o sistema
+
+gcc main.c dispositivos.c eventos.c menus.c sensores.c utils.c impExportar.c -o sistema
+
+gcc main.c dispositivos.c eventos.c menus.c ordenarListar.c sensores.c utils.c -o sistema
+
+gcc main.c dispositivos.c eventos.c menus.c ordenarListar.c sensores.c utils.c importarEexportar.c -o sistema
+
