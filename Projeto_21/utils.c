@@ -39,7 +39,7 @@ void liberarFilaEventos(FilaEventos* fila) {
 
 void mostrarInformacao(ListaDisp* lista){
     ListaDisp* atual = lista;
-    printf("----------------------------------------");
+    printf("----------------------------------------------------");
     printf("\nDispositivo ID: %d\n", atual->id);
     printf("Descricao: %s\n", atual->descricao);
     printf("Tipo: %s\n", atual->tipo);
