@@ -21,8 +21,7 @@ void menuPrincipal(ListaDisp* dispositivos, FilaEventos* fila) {
         printf("1 Opcoes de dispositivo\n");
         printf("2 Opcoes de sensor acionador\n");
         printf("3 Opcoes de evento\n");
-        printf("4 Importar valores (CSV)\n");
-        printf("5 Exportar valores (CSV)\n");   
+        printf("4 Exportar valores (CSV)\n");   
         printf("0 Sair\n");
         
         printf("Escolha uma opcao ");
@@ -38,7 +37,7 @@ void menuPrincipal(ListaDisp* dispositivos, FilaEventos* fila) {
             case 3:
                 menuEventos(dispositivos, fila);
                 break;
-            case 5:
+            case 4:
                 exportarValoresCSV(dispositivos, "dados.csv");
                 break;
             case 0:
