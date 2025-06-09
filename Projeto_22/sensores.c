@@ -4,6 +4,7 @@
 #include <stddef.h>
 #include "estrutura.h"
 
+
 void adicionarSensor(ListaDisp* lista) {
     ListaSensores* novoSensor = (ListaSensores*)malloc(sizeof(ListaSensores));
     novoSensor->id = ++(lista->contadorSensores);
@@ -48,7 +49,7 @@ void adicionarSensorNoDisp(ListaDisp** lista) {
 // Função para listar sensores de um dispositivo
 void listarSensores(ListaDisp* lista, int num) {
     ListaDisp* disp = lista;
-
+    
         ListaSensores* sensor = disp->sensores;
         if (!sensor) {
             printf("Nenhum sensor ou atuador encontrado.\n");
@@ -103,7 +104,7 @@ int verficarSeHaDisp(ListaDisp** lista) {
 void incluirValoresSensor(ListaDisp* lista) {
     float valor;
     char timestamp[30];
-
+    
     // Coletar dados do evento do usuario
     ListaDisp* disp = obterDispositivoPorID(lista);
     if (!disp) return;
@@ -118,7 +119,7 @@ void incluirValoresSensor(ListaDisp* lista) {
 
     printf("Digite o valor: ");
     scanf("%f", &valor);
-
+    
     obterTimestampAtual(timestamp, sizeof(timestamp));
 
     // Verificar duplicatas
@@ -141,3 +142,4 @@ void incluirValoresSensor(ListaDisp* lista) {
     sensor->valores = novo;
     printf("Valor incluido com sucesso.\n");
 }
+
